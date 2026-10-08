@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Comparativo de Ultra-Lujo Exclusivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F3E5AB;
+            --dark-bg: #0D1117;
+            --card-bg: #161B22;
+            --border-color: #30363D;
+            --text-primary: #F0F6FC;
+            --text-secondary: #8B949E;
+            --accent-green: #2EA043;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cinzel', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            /* FONDO DE LA ISLA PORCADA */
+            background-image: linear-gradient(rgba(13, 17, 23, 0.75), rgba(13, 17, 23, 0.85)), url('images/foto1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efecto parallax */
+            color: var(--text-primary);
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1750px;
+            width: 100%;
+            /* Efecto cristal (Frosted Glass) */
+            background-color: rgba(13, 17, 23, 0.75);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.7);
+            backdrop-filter: blur(8px);
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-logo {
+            height: 70px;
+            object-fit: contain;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 25px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover {
+            background: var(--gold);
+            color: var(--dark-bg);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            color: var(--gold);
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+        }
+
+        .badge-50 {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), #996515);
+            color: #000;
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(22, 27, 34, 0.85);
+            text-align: left;
+            min-width: 1400px;
+        }
+
+        th, td {
+            padding: 20px 18px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        th {
+            background-color: rgba(9, 13, 18, 0.9);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        th.our-project, td.our-project {
+            background-color: rgba(212, 175, 55, 0.08);
+            border-left: 2px solid var(--gold);
+            border-right: 2px solid var(--gold);
+        }
+
+        th.our-project {
+            background-color: rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+            font-size: 1.05rem;
+        }
+
+        .comp-link {
+            color: var(--gold);
+            text-decoration: underline;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        .comp-link:hover {
+            color: var(--gold-light);
+        }
+
+        .feature-title {
+            font-weight: bold;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .price-tag {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .price-subtext {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .check {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .cross {
+            color: #484F58;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        td.our-project ul li {
+            color: var(--text-primary);
+        }
+
+        .action-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #21262D;
+            color: var(--gold);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .action-btn:hover {
+            background-color: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-style: italic;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-bar">
+        <img src="images/logo.png" alt="Logo Promotor" class="top-logo">
+        <button id="lang-toggle" class="lang-btn">EN / ES</button>
+        <img src="images/ecoresort.png" alt="Logo Eco-Resort" class="top-logo">
+    </div>
+
+    <div class="header">
+        <h1 data-es="Análisis de Posicionamiento y Precios Globales" data-en="Global Positioning and Pricing Analysis">Análisis de Posicionamiento y Precios Globales</h1>
+        <p data-es="Comparativa de valoración residencial y tarifas hoteleras frente a un ecosistema autosuficiente diseñado exclusivamente para 50 propietarios en el mundo." data-en="Comparative residential valuation and hotel rates against a self-sufficient ecosystem designed exclusively for 50 owners worldwide.">Comparativa de valoración residencial y tarifas hoteleras frente a un ecosistema autosuficiente diseñado exclusivamente para 50 propietarios en el mundo.</p>
+        <span class="badge-50" data-es="Edición Limitada: Solo 50 Compradores Mundiales" data-en="Limited Edition: Only 50 Global Buyers">Edición Limitada: Solo 50 Compradores Mundiales</span>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th data-es="Atributo Clave" data-en="Key Attribute">Atributo Clave</th>
+                    <th><a href="https://www.albanybahamas.com/" target="_blank" class="comp-link">Albany Bahamas</a></th>
+                    <th><a href="https://www.soneva.com/soneva-jani" target="_blank" class="comp-link">Soneva Jani (Maldivas)</a></th>
+                    <th><a href="https://www.mered.ae/lanai-islands-dubai" target="_blank" class="comp-link">Lanai Island (Dubái)</a></th>
+                    <th><a href="https://www.velaaprivateisland.com/" target="_blank" class="comp-link">Velaa Private Island (Maldivas)</a></th>
+                    <th><a href="https://www.thoe.com/" target="_blank" class="comp-link">Heart of Europe (Dubái)</a></th>
+                    <th><a href="https://www.kokomofiji.com/" target="_blank" class="comp-link">Kokomo Private Island (Fiyi)</a></th>
+                    <th class="our-project" data-es="Nuestra Isla Privada (La Porcada)" data-en="Our Private Island (La Porcada)">Nuestra Isla Privada (La Porcada)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Valor Residencial Promedio" data-en="Average Residential Value">Valor Residencial Promedio</span>
+                        <span data-es="Precio de venta inmobiliario" data-en="Real estate sale price">Precio de venta inmobiliario</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$10M – $45M+ USD</span>
+                        <span class="price-subtext" data-es="Mansiones & Pent-houses en Marina" data-en="Mansions & Penthouses in Marina">Mansiones & Pent-houses en Marina</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$4M – $25M+ USD</span>
+                        <span class="price-subtext" data-es="Villas Overwater (Leasehold 50 yrs)" data-en="Overwater Villas (Leasehold 50 yrs)">Villas Overwater (Leasehold 50 yrs)</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$20M – $65M+ USD</span>
+                        <span class="price-subtext" data-es="Mansiones Lagunares de Lujo" data-en="Luxury Lagoon Mansions">Mansiones Lagunares de Lujo</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$15M – $35M+ USD</span>
+                        <span class="price-subtext" data-es="Residencias Privadas Ultralujo" data-en="Ultra-Luxury Private Residences">Residencias Privadas Ultralujo</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$5M – $30M USD</span>
+                        <span class="price-subtext" data-es="Villas Flotantes (Floating Seahorse)" data-en="Floating Seahorse Villas">Villas Flotantes (Floating Seahorse)</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$12M – $28M USD</span>
+                        <span class="price-subtext" data-es="Villas de Playa de Lujo Ecofriendly" data-en="Eco-friendly Luxury Beach Villas">Villas de Playa de Lujo Ecofriendly</span>
+                    </td>
+                    <td class="our-project">
+                        <span class="price-tag">$20M – $35M USD</span>
+                        <span class="price-subtext" data-es="Propiedad Plena (Freehold) + Membresía Vitalicia (Solo 50 Villas)" data-en="Full Ownership (Freehold) + Lifetime Membership (Only 50 Villas)">Propiedad Plena (Freehold) + Membresía Vitalicia (Solo 50 Villas)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Tarifa Hotelera Promedio (ADR)" data-en="Average Hotel Rate (ADR)">Tarifa Hotelera Promedio (ADR)</span>
+                        <span data-es="Tarifa por noche/suite" data-en="Rate per night/suite">Tarifa por noche/suite</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$2,500 – $8,000 USD</span>
+                        <span class="price-subtext" data-es="Noche en Resort / Marina Villa" data-en="Night in Resort / Marina Villa">Noche en Resort / Marina Villa</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$3,000 – $12,000 USD</span>
+                        <span class="price-subtext" data-es="Noche Overwater Villa" data-en="Night in Overwater Villa">Noche Overwater Villa</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">N/A</span>
+                        <span class="price-subtext" data-es="Proyecto 100% Residencial" data-en="100% Residential Project">Proyecto 100% Residencial</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$4,500 – $18,000+ USD</span>
+                        <span class="price-subtext" data-es="Noche en Private Island Villa" data-en="Night in Private Island Villa">Noche en Private Island Villa</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$2,000 – $7,500 USD</span>
+                        <span class="price-subtext" data-es="Noche en Hotel / Floating Villa" data-en="Night in Hotel / Floating Villa">Noche en Hotel / Floating Villa</span>
+                    </td>
+                    <td>
+                        <span class="price-tag">$2,800 – $9,000 USD</span>
+                        <span class="price-subtext" data-es="Noche All-Inclusive Exclusive Resort" data-en="Night All-Inclusive Exclusive Resort">Noche All-Inclusive Exclusive Resort</span>
+                    </td>
+                    <td class="our-project">
+                        <span class="price-tag">$3,500 – $10,000+ USD</span>
+                        <span class="price-subtext" data-es="Suites Doble Altura & Pool de Renta con 90% Ocupación Garantizada" data-en="Double Height Suites & Rental Pool with 90% Guaranteed Occupancy">Suites Doble Altura & Pool de Renta con 90% Ocupación Garantizada</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Inventario Residencial" data-en="Residential Inventory">Inventario Residencial</span>
+                        <span data-es="Finitud del ecosistema" data-en="Ecosystem finiteness">Finitud del ecosistema</span>
+                    </td>
+                    <td data-es="~600 Residencias" data-en="~600 Residences">~600 Residencias</td>
+                    <td data-es="~51 Villas Overwater" data-en="~51 Overwater Villas">~51 Villas Overwater</td>
+                    <td data-es="13 Mansiones" data-en="13 Mansions">13 Mansiones</td>
+                    <td data-es="~47 Villas Privadas" data-en="~47 Private Villas">~47 Villas Privadas</td>
+                    <td data-es="~130 Floating Seahorse" data-en="~130 Floating Seahorse">~130 Floating Seahorse</td>
+                    <td data-es="~21 Residencias & Villas" data-en="~21 Residences & Villas">~21 Residencias & Villas</td>
+                    <td class="our-project"><strong data-es="Límite Estricto de 50 Villas Privadas" data-en="Strict Limit of 50 Private Villas">Límite Estricto de 50 Villas Privadas</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Oferta Hotelera Integrada" data-en="Integrated Hotel Offer">Oferta Hotelera Integrada</span>
+                        <span data-es="Experiencia para invitados VIP" data-en="Experience for VIP guests">Experiencia para invitados VIP</span>
+                    </td>
+                    <td data-es="Hotel Boutique & Marina Resort" data-en="Boutique Hotel & Marina Resort">Hotel Boutique & Marina Resort</td>
+                    <td data-es="Resort Overwater Tradicional" data-en="Traditional Overwater Resort">Resort Overwater Tradicional</td>
+                    <td data-es="Sin Complejo Hotelero Propio" data-en="No Own Hotel Complex">Sin Complejo Hotelero Propio</td>
+                    <td data-es="Ultra-Luxury Boutique Island Resort" data-en="Ultra-Luxury Boutique Island Resort">Ultra-Luxury Boutique Island Resort</td>
+                    <td data-es="Hoteles Temáticos de Lujo" data-en="Luxury Themed Hotels">Hoteles Temáticos de Lujo</td>
+                    <td data-es="Boutique Island Eco-Resort" data-en="Boutique Island Eco-Resort">Boutique Island Eco-Resort</td>
+                    <td class="our-project">
+                        <ul>
+                            <li data-es="<strong>Eco-Resort Superluxe:</strong> 100 Suites a doble altura con jardín tropical y jacuzzi privado" data-en="<strong>Superluxe Eco-Resort:</strong> 100 double-height suites with tropical garden and private jacuzzi"><strong>Eco-Resort Superluxe:</strong> 100 Suites a doble altura con jardín tropical y jacuzzi privado</li>
+                            <li data-es="<strong>50 Villas Overwater adicionales</strong>" data-en="<strong>50 additional Overwater Villas</strong>"><strong>50 Villas Overwater adicionales</strong></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Autonomía Alimentaria" data-en="Food Autonomy">Autonomía Alimentaria</span>
+                        <span data-es="Soberanía de consumo" data-en="Consumption sovereignty">Soberanía de consumo</span>
+                    </td>
+                    <td><span class="cross" data-es="✕ Importación Externa" data-en="✕ External Import">✕ Importación Externa</span></td>
+                    <td><span class="cross" data-es="✕ Importación Externa" data-en="✕ External Import">✕ Importación Externa</span></td>
+                    <td><span class="cross" data-es="✕ Dependencia Urbana" data-en="✕ Urban Dependency">✕ Dependencia Urbana</span></td>
+                    <td><span class="cross" data-es="✕ Importación Externa" data-en="✕ External Import">✕ Importación Externa</span></td>
+                    <td><span class="cross" data-es="✕ Importación Externa" data-en="✕ External Import">✕ Importación Externa</span></td>
+                    <td data-es="Parcial (Huertos Orgánicos)" data-en="Partial (Organic Farms)">Parcial (Huertos Orgánicos)</td>
+                    <td class="our-project">
+                        <ul>
+                            <li data-es="<strong>Ganadería Propia:</strong> Abastecimiento directo de carnes de alta calidad" data-en="<strong>Own Livestock:</strong> Direct supply of high-quality meats"><strong>Ganadería Propia:</strong> Abastecimiento directo de carnes de alta calidad</li>
+                            <li data-es="<strong>Pesca Diaria Fresca</strong>" data-en="<strong>Fresh Daily Fishing</strong>"><strong>Pesca Diaria Fresca</strong></li>
+                            <li data-es="<strong>Consumo 100% Orgánico de Km 0</strong>" data-en="<strong>100% Organic Km 0 Consumption</strong>"><strong>Consumo 100% Orgánico de Km 0</strong></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Energía y Agua Propias" data-en="Own Energy and Water">Energía y Agua Propias</span>
+                        <span data-es="Infraestructura independiente" data-en="Independent infrastructure">Infraestructura independiente</span>
+                    </td>
+                    <td data-es="Red Local / Desalinizadora" data-en="Local Network / Desalination Plant">Red Local / Desalinizadora</td>
+                    <td data-es="Red Local / Desalinizadora" data-en="Local Network / Desalination Plant">Red Local / Desalinizadora</td>
+                    <td data-es="Red Municipal de Dubái" data-en="Dubai Municipal Network">Red Municipal de Dubái</td>
+                    <td data-es="Desalinizadora y Generadores" data-en="Desalination & Generators">Desalinizadora y Generadores</td>
+                    <td data-es="Red Submarina Dubái" data-en="Dubai Subsea Grid">Red Submarina Dubái</td>
+                    <td data-es="Solar + Desalinizadora" data-en="Solar + Desalination">Solar + Desalinizadora</td>
+                    <td class="our-project">
+                        <ul>
+                            <li data-es="<strong>Sistemas Propios de Energía Renovable</strong>" data-en="<strong>Own Renewable Energy Systems</strong>"><strong>Sistemas Propios de Energía Renovable</strong></li>
+                            <li data-es="<strong>Planta de Agua Propia e Independiente</strong>" data-en="<strong>Own and Independent Water Plant</strong>"><strong>Planta de Agua Propia e Independiente</strong></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Salud & Medicina Preventiva" data-en="Health & Preventive Medicine">Salud & Medicina Preventiva</span>
+                        <span data-es="Bienestar de grado clínico" data-en="Clinical-grade wellness">Bienestar de grado clínico</span>
+                    </td>
+                    <td data-es="Spa Convencional" data-en="Conventional Spa">Spa Convencional</td>
+                    <td>Wellness Spa</td>
+                    <td data-es="Sin Centro Médico Integrado" data-en="No Integrated Medical Center">Sin Centro Médico Integrado</td>
+                    <td data-es="Clarins Wellness Spa" data-en="Clarins Wellness Spa">Clarins Wellness Spa</td>
+                    <td data-es="Spa Temático" data-en="Themed Spa">Spa Temático</td>
+                    <td data-es="Yaukuve Spa Sanctuary" data-en="Yaukuve Spa Sanctuary">Yaukuve Spa Sanctuary</td>
+                    <td class="our-project"><strong data-es="Clínica Médica Suiza Exclusiva (Retoque invisible, longevidad y máxima discreción)" data-en="Exclusive Swiss Medical Clinic (Invisible touch-up, longevity, and maximum discretion)">Clínica Médica Suiza Exclusiva</strong> (Retoque invisible, longevidad y máxima discreción)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Entretenimiento Privado" data-en="Private Entertainment">Entretenimiento Privado</span>
+                        <span data-es="Eventos y juego VIP" data-en="Events and VIP gaming">Eventos y juego VIP</span>
+                    </td>
+                    <td data-es="Club Social & Marina" data-en="Social Club & Marina">Club Social & Marina</td>
+                    <td data-es="Cine Sobre el Agua" data-en="Cinema Over Water">Cine Sobre el Agua</td>
+                    <td data-es="Club de Playa Privado" data-en="Private Beach Club">Club de Playa Privado</td>
+                    <td data-es="Campo Golf 9 Hoyos + Submarino" data-en="9-Hole Golf + Submarine">Campo Golf 9 Hoyos + Submarino</td>
+                    <td data-es="Plaza de Nieve NAI / Eventos" data-en="NAI Snow Plaza / Events">Plaza de Nieve NAI / Eventos</td>
+                    <td data-es="Deportes Acuáticos & Submarinismo" data-en="Water Sports & Diving">Deportes Acuáticos & Submarinismo</td>
+                    <td class="our-project"><strong data-es="Casino Privado + 2 Torneos High Roller de Poker (Circuito Asiático y Atlántico)" data-en="Private Casino + 2 High Roller Poker Tournaments (Asian and Atlantic Circuit)">Casino Privado + 2 Torneos High Roller de Poker</strong> (Circuito Asiático y Atlántico)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Garantía de Ocupación" data-en="Occupancy Guarantee">Garantía de Ocupación</span>
+                        <span data-es="Rendimiento de inversión" data-en="Investment performance">Rendimiento de inversión</span>
+                    </td>
+                    <td data-es="Estacional (Variable)" data-en="Seasonal (Variable)">Estacional (Variable)</td>
+                    <td>Estacional (60% - 75%)</td>
+                    <td>N/A</td>
+                    <td>Estacional (65% - 80%)</td>
+                    <td data-es="Variable por proyecto" data-en="Variable by project">Variable por proyecto</td>
+                    <td>Estacional (55% - 70%)</td>
+                    <td class="our-project"><span class="check" data-es="✓ 90% Garantizado Todo el Año" data-en="✓ 90% Guaranteed All Year Round">✓ 90% Garantizado Todo el Año</span> <span data-es="por Cadena Hotelera Internacional" data-en="by International Hotel Chain">por Cadena Hotelera Internacional</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="feature-title" data-es="Enlaces Web" data-en="Web Links">Enlaces Web</span>
+                        <span data-es="Revisar proyectos" data-en="Review projects">Revisar proyectos</span>
+                    </td>
+                    <td><a href="https://www.albanybahamas.com/" target="_blank" class="action-btn" data-es="Visitar Web" data-en="Visit Website">Visitar Web</a></td>
+                    <td><a href="https://www.soneva.com/soneva-jani" target="_blank" class="action-btn" data-es="Visitar Web" data-en="Visit Website">Visitar Web</a></td>
+                    <td><a href="https://www.mered.ae/lanai-islands-dubai" target="_blank" class="action-btn" data-es="Visitar Web" data-en="Visit Website">Visitar Web</a></td>
+                    <td><a href="https://www.velaaprivateisland.com/" target="_blank" class="action-btn" data-es="Visitar Web" data-en="Visit Website">Visitar Web</a></td>
+                    <td><a href="https://www.thoe.com/" target="_blank" class="action-btn" data-es="Visitar Web" data-en="Visit Website">Visitar Web</a></td>
+                    <td><a href="https://www.kokomofiji.com/" target="_blank" class="action-btn" data-es="Visitar Web" data-en="Visit Website">Visitar Web</a></td>
+                    <td class="our-project"><span data-es="Acceso bajo petición" data-en="Access upon request">Acceso bajo petición</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="footer-note" data-es="Documento confidencial preparado exclusivamente para el análisis de inversión y posicionamiento estratégico." data-en="Confidential document prepared exclusively for investment analysis and strategic positioning.">Documento confidencial preparado exclusivamente para el análisis de inversión y posicionamiento estratégico.</p>
+
+    <div class="copyright">
+        &copy; 2026 Takyma Investment Pioneer
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const langBtn = document.getElementById('lang-toggle');
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            document.documentElement.lang = currentLang;
+            
+            document.querySelectorAll('[data-es]').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + currentLang);
+            });
+
+            langBtn.textContent = currentLang === 'es' ? 'EN / ES' : 'ES / EN';
+        }
+
+        langBtn.addEventListener('click', toggleLanguage);
+    });
+</script>
+
+</body>
+</html>
